@@ -4,13 +4,29 @@
  * and open the template in the editor.
  */
 package Bitso;
+import com.bitso.Bitso;
+import com.bitso.BitsoTicker;
+import com.bitso.exceptions.BitsoAPIException;
+import com.bitso.exchange.BookInfo;
+import com.bitso.exchange.Ticker;
 
 /**
  *
- * @author sdist
+ * @author WorrenGilgamesh
  */
 public class connection {
-    public static void main(String... argv) {
-	System.out.println("hola");
- }
+    static Bitso bitso = new Bitso(System.getenv(""), System.getenv(""));
+    
+    public BitsoTicker[] B_Ticker() throws BitsoAPIException{
+        BitsoTicker[] tickers = bitso.getTicker();
+        return tickers;
+    }
+    public BookInfo[] B_Book() throws BitsoAPIException{
+        BookInfo[] availableBooks = bitso.getAvailableBooks();
+        return availableBooks;
+    }
+    
+
+    public static void main(String... argv){
+    }
 }
