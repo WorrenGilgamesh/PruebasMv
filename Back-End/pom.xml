@@ -68,7 +68,7 @@
                  <configuration>
                   <transformers>
                    <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                    <mainClass>connection</mainClass>
+                    <mainClass>Bitso.connection</mainClass>
                    </transformer>
                   </transformers>
                  </configuration>
